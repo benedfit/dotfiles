@@ -1,0 +1,26 @@
+#!/bin/sh
+
+system_type=$(uname -s)
+
+if [ "$system_type" = "Darwin" ]; then
+  if ! command -v brew >/dev/null 2>&1; then
+    echo "Installing Homebrew"
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  fi
+
+  if [ -f ~/.Brewfile ]; then
+    echo "Updating Homebrew bundle"
+    brew bundle --global
+  fi
+
+  if [ -d ~/.iterm2 ] && [ `defaults read com.googlecode.iterm2.plist PrefsCustomFolder` != "~/.iterm2" ]; then
+    echo "Setting iTerm preference folder"
+    defaults write com.googlecode.iterm2 PrefsCustomFolder -string "~/.iterm2"
+    defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
+  fi
+
+  if [ ! -d ~/.oh-my-zsh ]; then
+    echo "Installing On My ZSH!"
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --keep-zshrc
+  fi
+fi
