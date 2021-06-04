@@ -15,6 +15,7 @@ cask "logitech-camera-settings"
 cask "logitech-options"
 cask "slack"
 cask "sourcetree"
+cask "spotify"
 cask "visual-studio-code"
 cask "zoom"
 
