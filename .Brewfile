@@ -9,6 +9,8 @@ brew "yadm"
 brew "yarn"
 brew "zsh"
 
+cask "elgato-stream-deck"
+cask "firefox"
 cask "google-chrome"
 cask "iterm2"
 cask "logitech-camera-settings"
