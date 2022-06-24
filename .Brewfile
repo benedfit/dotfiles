@@ -2,6 +2,7 @@ tap "homebrew/cask"
 tap "homebrew/cask-drivers"
 
 brew "antigen"
+brew "circleci"
 brew "git"
 brew "hub"
 brew "mas"
