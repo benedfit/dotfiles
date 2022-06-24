@@ -22,5 +22,3 @@ antigen bundle lukechilds/zsh-nvm
 antigen apply
 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
-[[ -r /usr/local/bin/rit ]] && rit completion zsh > ~/.rit_completion
-source ~/.rit_completion
