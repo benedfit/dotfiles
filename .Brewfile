@@ -10,6 +10,7 @@ brew "yadm"
 brew "yarn"
 brew "zsh"
 
+cask "1password"
 cask "elgato-stream-deck"
 cask "firefox"
 cask "google-chrome"
