@@ -4,7 +4,8 @@ system_type=$(uname -s)
 
 if [ "$system_type" = "Darwin" ]; then
   if [ ! -f "/Library/Apple/System/Library/Receipts/com.apple.pkg.RosettaUpdateAuto.bom" ]; then
-    yes A | softwareupdate --install-rosetta
+    echo "Installing Rosetta 2"
+    softwareupdate --install-rosetta --agree-to-license
   fi
 
   if ! command -v brew >/dev/null 2>&1; then
