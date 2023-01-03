@@ -22,7 +22,8 @@ if [ "$system_type" = "Darwin" ]; then
     echo "Setting iTerm preference folder"
 
     if [ ! -f "/Library/Preferences/com.googlecode.iterm2.plist" ]; then
-      open -a iTerm -g
+      open -a iTerm
+      osascript -e 'quit app "iTerm"'
     fi
 
     if [ `defaults read com.googlecode.iterm2.plist PrefsCustomFolder` != "~/.iterm2" ]; then
