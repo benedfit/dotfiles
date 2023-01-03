@@ -18,10 +18,17 @@ if [ "$system_type" = "Darwin" ]; then
     brew bundle --global
   fi
 
-  if [ -d ~/.iterm2 ] && [ `defaults read com.googlecode.iterm2.plist PrefsCustomFolder` != "~/.iterm2" ]; then
+  if [ -d ~/.iterm2 ]; then
     echo "Setting iTerm preference folder"
-    defaults write com.googlecode.iterm2 PrefsCustomFolder -string "~/.iterm2"
-    defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
+
+    if [ ! -f "/Library/Preferences/com.googlecode.iterm2.plist" ]; then
+      open -a iTerm
+    fi
+
+    if [ `defaults read com.googlecode.iterm2.plist PrefsCustomFolder` != "~/.iterm2" ]; then
+      defaults write com.googlecode.iterm2 PrefsCustomFolder -string "~/.iterm2"
+      defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
+    fi
   fi
 
   if [ ! -d ~/.oh-my-zsh ]; then
