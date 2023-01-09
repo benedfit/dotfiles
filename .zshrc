@@ -2,6 +2,8 @@
 export NVM_AUTO_USE=true
 export NVM_COMPLETION=true
 
+ssh-add --apple-load-keychain
+
 source $(brew --prefix)/share/antigen/antigen.zsh
 
 antigen use oh-my-zsh
