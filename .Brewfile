@@ -24,5 +24,4 @@ cask "spotify"
 cask "visual-studio-code"
 cask "zoom"
 
-mas "Amphetamine", id: 937984704
 mas "Magnet", id: 441258766
