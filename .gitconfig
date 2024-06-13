@@ -1,6 +1,7 @@
 [user]
 	name = Ben Edwards
 	email = hello@benedfit.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEMFohPkAQHVNLt+K2TaC4QlIIvbFDILoBeCw5LQC8d9
 [core]
 	excludesfile = ~/.gitignore
 [include]
@@ -11,3 +12,9 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[commit]
+	gpgsign = true
