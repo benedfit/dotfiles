@@ -1,8 +1,3 @@
-# Configure gh
-if (( $+commands[gh] )); then
-  alias git=gh
-fi
-
 # Configure nvm
 export NVM_AUTO_USE=true
 export NVM_COMPLETION=true
