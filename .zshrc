@@ -1,3 +1,7 @@
+if (( $+commands[gh] )); then
+  alias git=gh
+fi
+
 # Configure nvm
 export NVM_AUTO_USE=true
 export NVM_COMPLETION=true
@@ -11,8 +15,8 @@ antigen use oh-my-zsh
 
 antigen theme robbyrussell
 
+antigen bundle gh
 antigen bundle git
-antigen bundle github
 antigen bundle laggardkernel/zsh-iterm2
 antigen bundle lukechilds/zsh-nvm
 

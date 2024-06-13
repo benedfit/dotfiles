@@ -1,7 +1,7 @@
 brew "antigen"
 brew "circleci"
+brew "gh"
 brew "git"
-brew "hub"
 brew "jq"
 brew "mas"
 brew "netlify-cli"
