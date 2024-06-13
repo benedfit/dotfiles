@@ -15,7 +15,7 @@ if [ "$system_type" = "Darwin" ]; then
 
   if [ -f ~/.Brewfile ]; then
     echo "Updating Homebrew bundle"
-    brew bundle --global
+    brew bundle --global --cleanup
   fi
 
   if [ -d ~/.iterm2 ]; then
