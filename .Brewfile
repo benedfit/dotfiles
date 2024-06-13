@@ -11,6 +11,7 @@ brew "zsh"
 
 cask "1password"
 cask "1password-cli"
+cask "discord"
 cask "elgato-stream-deck"
 cask "firefox"
 cask "google-chrome"
