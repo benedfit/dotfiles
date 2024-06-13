@@ -1,3 +1,4 @@
+# Configure gh
 if (( $+commands[gh] )); then
   alias git=gh
 fi
@@ -15,7 +16,6 @@ antigen use oh-my-zsh
 
 antigen theme robbyrussell
 
-antigen bundle gh
 antigen bundle git
 antigen bundle laggardkernel/zsh-iterm2
 antigen bundle lukechilds/zsh-nvm
