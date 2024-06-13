@@ -2,7 +2,8 @@
 export NVM_AUTO_USE=true
 export NVM_COMPLETION=true
 
-ssh-add --apple-load-keychain
+# Configure SSH
+export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
 
 source $(brew --prefix)/share/antigen/antigen.zsh
 

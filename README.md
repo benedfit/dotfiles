@@ -28,9 +28,3 @@ To update to the latest version:
 ```
 yadm pull
 ```
-
-## TODO
-
-Need to automate the following
-
-- Setup SSH key
